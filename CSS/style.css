@@ -1,0 +1,75 @@
+body{
+    background:url(../IMAGES/BG.jpg);
+    background-size:cover;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.top{
+    background-color:whitesmoke;
+    width:40%;
+    margin: 2% auto;
+    text-align: center;
+    border-radius:10px; 
+    opacity: 0.8;
+    text-shadow: 0.1rem 0.1rem dimgray;
+}
+
+.gameArea{
+    background-color:whitesmoke;
+    width: 60%;
+    margin: 5% auto;
+    text-align: center;
+    border-radius:10px; 
+    opacity: 0.8;
+}
+
+.mainHead{
+    font-size: 5rem;
+    text-shadow: 0.2rem 0.2rem dimgray;
+
+}
+
+input{
+
+    width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing:border-box; 
+  text-align: center;
+  border-radius: 10px;
+  ;
+}
+
+.btn{
+    
+        background-color:rgb(233,233,233); 
+        color:black; 
+        border: 2px solid #D4D4D4;
+    
+
+        padding: 1%;
+        font-size: 1.25rem;
+        margin: 1%;
+        cursor: pointer;
+
+
+
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+  }
+
+  #counting{
+    background-color:whitesmoke;
+    width: 15%;
+font-size: 2rem;
+    margin: 2% auto;
+  
+    
+    text-align: center;
+    border-radius:10px; 
+    opacity: 0.8;
+    text-shadow: 0.1rem 0.1rem dimgray;
+  }
