@@ -1,75 +1,86 @@
-body{
-    background:url(../IMAGES/BG.jpg);
-    background-size:cover;
+body {
+    background: url(../IMAGES/BG.jpg);
+    background-size: cover;
     font-family: 'Bungee Shade', cursive;
-}
-
-.top{
-    background-color:whitesmoke;
-    width:40%;
+  }
+   
+  #top {
+    background-color: whitesmoke;
+    width: 40%;
     margin: 2% auto;
     text-align: center;
-    border-radius:10px; 
+    border-radius: 10px;
     opacity: 0.8;
     text-shadow: 0.1rem 0.1rem dimgray;
-}
-
-.gameArea{
-    background-color:whitesmoke;
+  }
+   
+  .gameArea {
+    background-color: whitesmoke;
     width: 60%;
     margin: 5% auto;
     text-align: center;
-    border-radius:10px; 
+    border-radius: 10px;
     opacity: 0.8;
-}
-
-.mainHead{
+  }
+   
+  #mainHead {
     font-size: 5rem;
     text-shadow: 0.2rem 0.2rem dimgray;
-
-}
-
-input{
-
+  }
+   
+  input {
     width: 40%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing:border-box; 
-  text-align: center;
-  border-radius: 10px;
-  ;
-}
-
-.btn{
-    
-        background-color:rgb(233,233,233); 
-        color:black; 
-        border: 2px solid #D4D4D4;
-    
-
-        padding: 1%;
-        font-size: 1.25rem;
-        margin: 1%;
-        cursor: pointer;
-
-
-
-}
-
-.btn:hover {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+  }
+   
+  .btn {
+    background-color: rgb(233, 233, 233);
+    color: black;
+    border: 2px solid #d4d4d4;
+   
+    padding: 1%;
+    font-size: 1.25rem;
+    margin: 1%;
+    cursor: pointer;
+  }
+   
+  .btn:hover {
     background-color: white;
     color: black;
   }
-
-  #counting{
-    background-color:whitesmoke;
+   
+  #counting {
+    background-color: whitesmoke;
     width: 15%;
-font-size: 2rem;
+    font-size: 2rem;
     margin: 2% auto;
-  
-    
+   
     text-align: center;
-    border-radius:10px; 
+    border-radius: 10px;
     opacity: 0.8;
     text-shadow: 0.1rem 0.1rem dimgray;
   }
+  #score{
+    background-color: whitesmoke;
+    width: 40%;
+    margin: 5% auto;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+   
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+   
+  .show {
+    display: block;
+    visibility: visible;
+  }
+   

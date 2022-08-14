@@ -1,8 +1,83 @@
-var msg = document.querySelector(".mainHead");
-// var guessText = document.querySelector(".input")
-// var submitBtn=document.querySelector(".btn")
-// let inputGet= document.querySelector(".input")
-let guessArray = [
+const playAgainEl = document.getElementById("playAgain");
+const guessBoxEl = document.getElementById("guessBox");
+const userInputEl = document.getElementById("userInput");
+const topEl = document.getElementById("top");
+const mainHeadEl = document.getElementById("mainHead");
+let data = 0;
+
+const displayMsgs = {
+  success: "Hey You Won! Play Again!",
+  fail: "Better Luck next time! Try Again",
+};
+
+function getRandomElement(array) {
+  let randomIdx = Math.floor(Math.random() * array.length);
+  return array[randomIdx];
+}
+
+function shuffleStr(str) {
+  const arr = str.split("");
+  let ctr = arr.length;
+  let temp, index;
+
+  while (ctr > 0) {
+    index = Math.floor(Math.random() * ctr);
+    ctr--;
+
+    temp = arr[ctr];
+    arr[ctr] = arr[index];
+    arr[index] = temp;
+  }
+  return arr.join("");
+}
+
+function startGame(entities, entityName) {
+  initialiseGame(entityName);
+
+  const randomEntity = getRandomElement(entities);
+  mainHeadEl.innerHTML = `Guess the ${entityName.toLowerCase()} "${shuffleStr(
+    randomEntity
+  )
+    .split("")
+    .join(",")}"`;
+  document.getElementById("guessBtn").addEventListener("click", (e) => {
+    const userInput = userInputEl.value;
+
+    if (userInput === randomEntity) {
+      mainHeadEl.innerHTML = displayMsgs.success;
+    } else {
+      mainHeadEl.innerText = displayMsgs.fail;
+    }
+
+    restartGame(entities, entityName);
+  });
+}
+
+function initialiseGame(entityName) {
+  guessBoxEl.classList.add("show");
+  playAgainEl.classList.remove("show");
+  playAgainEl.classList.add("hide");
+
+  topEl.innerHTML = `Guess the ${entityName.toLowerCase()}`;
+  userInputEl.value = "";
+}
+
+function restartGame(entities, entityName) {
+  guessBoxEl.classList.add("hide");
+  guessBoxEl.classList.remove("show");
+
+  playAgainEl.classList.add("show");
+  playAgainEl.classList.remove("hide");
+
+  playAgainEl.addEventListener("click", (e) => {
+    startGame(entities, entityName);
+  });
+}
+
+let fruits = ["apple", "banana", "custard apple", "watermelon", "mango"].map(
+  (v) => v.toLowerCase()
+);
+let cars = [
   "I20",
   "I10",
   "Amaze",
@@ -19,53 +94,6 @@ let guessArray = [
   "Benz",
   "Bugatti",
   "Carrera",
-].map(v => v.toLowerCase());;
+].map((v) => v.toLowerCase());
 
-function genWords() {
-  let i = Math.floor(Math.random() * guessArray.length);
-  let ranWords = guessArray[i];
-  //  console.log(ranWords);
-  return ranWords;
-}
-
-
-function shuffle(arra1) {
-  let ctr = arra1.length;
-  let temp, index;
-
-  while (ctr > 0) {
-    index = Math.floor(Math.random() * ctr);
-
-    ctr--;
-
-    temp = arra1[ctr];
-    arra1[ctr] = arra1[index];
-    arra1[index] = temp;
-  }
-  return arra1;
-}
-
-let answer = genWords();
-// console.log(answer)
-
-document.querySelector(".mainHead").innerHTML =
-  "Guess the car " + shuffle(answer.split(""));
-
-
-
-
-var guessedWord = document.querySelector(".input");
-document.querySelector(".btn").addEventListener("click", function (e) {
-e.preventDefault()
-  let question = guessedWord.value;
-  // console.log(question)
-
-  if (question === answer) {
-    document.querySelector(".mainHead").innerHTML= "Hey You Won! Play Again!"
-  } else {
- 
-    document.querySelector(".mainHead").innerText = "Better Luck next time! Try Again" 
-  }
-});
-
-
+startGame(cars, "Car");

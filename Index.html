@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess The Word</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-</head>
-<body>
-<header>  
-      <h1 class="top">Guess the Car</h1>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <header>
+      <h1 id="top"></h1>
     </header>
-  
-
+ 
     <div class="gameArea">
-        <h2 class="mainHead"></h2>
-<form>
-<div  class="box">
-    <input type="text" class="input" placeholder="Start Guessing">
-</div>
-    <button class="btn" type="submit"> Guessed! </button>
-</form>
-
+      <h2 id="mainHead"></h2>
+      <div class="userInteraction">
+        <div id="guessBox">
+          <input
+            type="text"
+            id="userInput"
+            class="input"
+            placeholder="Start Guessing"
+          />
+          <button id="guessBtn" class="btn">Guess</button>
+        </div>
+ 
+        <div id="playAgain">
+          <button id="playAgainBtn" class="btn">Play again</button>
+        </div>
+      </div>
+    
     </div>
-
-
-
-
-<script src="JS/Word.js"></script>
-
-
-
-</body>
+    <h2 id="score">Score:</h2>
+    <script src="JS/Word.js"></script>
+  </body>
 </html>
