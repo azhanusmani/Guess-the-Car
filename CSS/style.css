@@ -54,25 +54,7 @@ body {
     color: black;
   }
    
-  #counting {
-    background-color: whitesmoke;
-    width: 15%;
-    font-size: 2rem;
-    margin: 2% auto;
-   
-    text-align: center;
-    border-radius: 10px;
-    opacity: 0.8;
-    text-shadow: 0.1rem 0.1rem dimgray;
-  }
-  #score{
-    background-color: whitesmoke;
-    width: 40%;
-    margin: 5% auto;
-    text-align: center;
-    border-radius: 10px;
-    opacity: 0.8;
-  }
+
    
   .hide {
     display: none;
